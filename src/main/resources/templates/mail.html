@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu compra!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        ul li strong {
+            color: #3498db;
+        }
+
+        .qr-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .qr-container img {
+            max-width: 150px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            ul li {
+                font-size: 14px;
+            }
+
+            .qr-container img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <h1>¡Gracias por tu compra!</h1>
+    <p>¡Hola {{nombre}}! Te informamos que tu compra ha sido exitosa. A continuación, te presentamos los detalles de tu compra:</p>
+    <ul>
+        <li><strong>Nombre de la película:</strong> {{nombrePelicula}}</li>
+        <li><strong>Fecha de la función:</strong> {{fechaFuncion}}</li>
+        <li><strong>Cantidad de entradas:</strong> {{cantidadEntradas}}</li>
+        <li><strong>Precio total:</strong> {{precioTotal}}</li>
+        <li><strong>Código QR:</strong></li>
+    </ul>
+    <div class="qr-container">
+        <img src="{{qr}}" alt="QR Code">
+    </div>
+    <p>¡No olvides llevar tu código QR impreso o en tu dispositivo móvil para poder ingresar a la función! ¡Te esperamos!</p>
+
+    <div class="footer">
+        <p>Equipo del Evento</p>
+    </div>
+</div>
+</body>
+</html>
